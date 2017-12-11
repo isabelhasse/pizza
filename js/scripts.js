@@ -14,15 +14,19 @@ Pizza.prototype.price = function() {
 
 $(document).ready(function(){
   var pizzas = [];
-  var counter = 2;
+  var counter = 1;
 
   $("#order-form").submit(function(event){
-    event.preventDefault();    
+    event.preventDefault();
 
     var orderedSize = parseInt( $("input:radio[name=size]:checked").val() );
     var orderedToppings = $("input:checkbox[name=toppings]:checked");
     var orderedPizza = new Pizza(orderedSize, orderedToppings);
     pizzas.push(orderedPizza);
+
+    $("#pizzas").append("<li>Pizza #" + counter + ": $" + orderedPizza.price() + "</li>");
+
+    counter += 1;
 
     var totalPrice = 0;
     pizzas.forEach(function(pizza) {
@@ -31,7 +35,5 @@ $(document).ready(function(){
 
     $("#number").text(counter);
     $("#price").text("Your total is $" + totalPrice);
-
-    counter += 1;
   });
 });
