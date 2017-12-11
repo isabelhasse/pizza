@@ -1,0 +1,11 @@
+.jumbotron h1 {
+  font-size: 40px;
+}
+
+.form-group input {
+  margin-bottom: 8px;
+}
+
+.btn {
+  margin-bottom: 10px;
+}

@@ -8,6 +8,49 @@
     <title></title>
   </head>
   <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Order a pizza!</h1>
+      </div>
+      <h3>Pizza #<span id="number">1</span></h3>
+      <form id="order-form">
+        <div class="row">
+          <div class="col-md-3" id="new-pizza">
 
+            <p><b>Size</b></p>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="8" checked>Small ($8)
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="10">Medium ($10)
+              </label>
+            </div>
+            <div class="radio">
+              <label>
+                <input type="radio" name="size" value="12">Large ($12)
+              </label>
+            </div>
+
+            <p><b>Toppings</b></p>
+            <div class="form-group">
+              <input type="checkbox" name="toppings" value="2"> Cheese ($2)<br>
+              <input type="checkbox" name="toppings" value="2"> Olives ($2)<br>
+              <input type="checkbox" name="toppings" value="2"> Onions ($2)<br>
+              <input type="checkbox" name="toppings" value="2"> Spinach ($2)<br>
+              <input type="checkbox" name="toppings" value="3"> Mushrooms ($3)<br>
+              <input type="checkbox" name="toppings" value="3"> Pepperoni ($3)<br>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="submit">Add to order</button>
+      </form>
+
+      <div id="price">
+      </div>
+
+    </div>
   </body>
 </html>
